@@ -1,0 +1,240 @@
+:root {
+    --bg-color: rgb(4, 4, 4);
+    --primary-color: rgb(146, 238, 245);
+    --secondary-color: rgb(48, 200, 251);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif,'Times New Roman';
+    transition-duration: 200ms;
+}
+
+.softerBlue {
+    color: rgb(58, 175, 182);
+}
+
+.bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: -2;
+    opacity: 30%;
+}
+
+a {
+    text-decoration: unset;
+    color: var(--secondary-color)
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 24px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    font-size: 1.5em;
+    padding-bottom: 300px;
+}
+
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    color: var(--secondary-color)
+}
+
+
+nav a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+main>section {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+main, section, .nameContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    gap: 50px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    gap:45px;
+}
+
+.imgcontainer>img{
+    max-width: 200px;
+    border-radius: 100%;
+    border: 3px solid cyan
+}
+
+.profileStats {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.profileStats>.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding-top: 12px;
+}
+.profileStats .stats div {
+    display: flex;
+    gap: 15px
+
+}
+
+.stats div div {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+    margin-left: 55px;
+}
+
+.checkBox {
+    border: 2px solid white;
+    justify-content: center;
+}
+
+.email {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+.arrow {
+    transform: rotate(-45deg);
+}
+
+.email:hover {
+    opacity: 0.7;
+    
+}
+
+.aboutMe {
+    text-indent: 40px;
+    text-align: justify;
+    padding-top: 50px;
+    color: rgb(58, 175, 182);
+    line-height: 1.5em;
+}
+
+.smiley {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.projectContainer {
+    display: flex;
+    align-items: stretch;
+    gap: 55px;
+
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    border-top: 1px solid 
+}
+
+.projectItem {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+
+}
+
+.projectItem div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap:24px
+}
+
+.projectItem>div:last-child {
+    aspect-ratio: 16/9;
+    max-width: 30%;
+    overflow: hidden;
+}
+
+.projectItem div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: solid 1px grey;
+}
+
+.projecInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProjectInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkContainer {
+    display: flex;
+    gap: 50px;
+    padding-top: 14px;
+}
+
+.Links {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8em;
+}
+
+.Links:hover {
+    opacity: 0.7;
+}
+
+
+@media (min-width: 640px) {
+    .profileStats {
+        flex-direction: row;
+    }
+    .projectItem {
+        flex-direction: row;
+    }
+}
